@@ -17,7 +17,6 @@ jobs:
 
       - name: Get the data
         run: ./scrapper.sh
-        shell: bash
 
       - name: Commit files
         run: |
