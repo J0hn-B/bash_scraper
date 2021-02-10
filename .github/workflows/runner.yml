@@ -9,6 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install html2text
+        run: sudo apt-get install html2text
+
       - name: Make scripts executable
         run: find -type f -iname "*.sh" -exec chmod +x {} \;
 
