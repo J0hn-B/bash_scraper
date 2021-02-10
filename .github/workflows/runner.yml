@@ -13,7 +13,7 @@ jobs:
         run: sudo apt-get install html2text
 
       - name: Make scripts executable
-        run: find -type f -iname "*.sh" -exec chmod +x {} \;
+        run:  find . -iname "*.sh" -exec chmod +x {} \;
 
       - name: Get the data
         run: scrapper.sh
