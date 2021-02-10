@@ -2,7 +2,7 @@ name: Get data
 
 on: 
   schedule:
-    - cron: "11 15 * * *"
+    - cron: "17 16 * * *"
 
 jobs:
   deploy:
