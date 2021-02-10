@@ -1,6 +1,8 @@
 name: Get data
 
-on: [push]
+on: 
+  schedule:
+    - cron: "05 16 * * *"
 
 jobs:
   deploy:
