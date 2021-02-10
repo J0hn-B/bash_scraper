@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Install html2text
-# sudo apt install html2text -y
+#Install html2text
+#sudo apt install html2text -y
 
 PAGE="https://www.jobserve.com/gb/en/Job-Search/"
 
