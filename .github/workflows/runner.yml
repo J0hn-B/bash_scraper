@@ -1,0 +1,28 @@
+name: Get data
+
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Make scripts executable
+        run: find -type f -iname "*.sh" -exec chmod +x {} \;
+
+      - name: Get the data
+        run: ./scrapper.sh
+        shell: bash
+
+      - name: Commit files
+        run: |
+          git config --local user.email "${{ secrets.GIT_USER_EMAIL }}"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "data update" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
