@@ -16,7 +16,7 @@ jobs:
         run:  find . -iname "*.sh" -exec chmod +x {} \;
 
       - name: Get the data
-        run: scrapper.sh
+        run: ./scrapper.sh
         shell: bash
 
       - name: Commit files
