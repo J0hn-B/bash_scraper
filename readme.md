@@ -2,7 +2,7 @@
 
 A Monday to Friday UK IT jobs recorder in pure #bash.
 
-- Bash script will fetch the data
+- Bash script will fetch the data from Jobserve
 - Github Action will schedule and update the repo csv file on a daily basis at 17:00
 
 ## Show me
